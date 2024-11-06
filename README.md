@@ -4,14 +4,15 @@
 Qihoo360 evpp库的裁剪库，解除了evpp库对boost和glog库的依赖，使得evpp库的编译和使用更加方便
 
 #### 软件架构
-软件架构说明
+该库为将evpp库部分单独提出来，所以底层依赖依旧是libevent库
+在编译该库前，请先确定系统中已安装了libevent库
 
 
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  mkdir build && cd build
+2.  cmake ..
+3.  make
 
 #### 使用说明
 
@@ -29,9 +30,5 @@ Qihoo360 evpp库的裁剪库，解除了evpp库对boost和glog库的依赖，使
 
 #### 特技
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+1.  libevent仓库地址[https://github.com/libevent/libevent.git](https://github.com/libevent/libevent.git)
+2.  Qihoo360 evpp仓库地址[https://github.com/Qihoo360/evpp.git](https://github.com/Qihoo360/evpp.git)
