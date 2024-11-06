@@ -9,12 +9,21 @@ namespace evnetplus {
 static const std::string empty_string;
 
 std::string strerror(int e) {
+#if !defined(USE_ARM_PLATFROM)
     char buf[2048] = {};
     const char* s = strerror_r(e, buf, sizeof(buf) - 1);
     if (s) {
         return std::string(s);
     }
     return std::string();
+#else
+    char buf[2048] = {};
+    int ret = strerror_r(e, buf, sizeof(buf) - 1);
+    if (!ret) {
+        return std::string(buf);
+    }
+    return std::string();
+#endif
 }
 
 namespace sock {

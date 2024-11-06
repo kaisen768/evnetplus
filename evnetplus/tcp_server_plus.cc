@@ -41,7 +41,7 @@ TCPServerPlus::TCPServerPlus(evnetplus::EventLoop* loop, const std::string& list
                 TimeTickerHelper::Ptr helper = pair->second;
                 helper->timer->Cancel();
 
-                _ticker_map.erase(pair);
+                _ticker_map.erase(pair->first);
             }
 
             auto sessionpair = _session_map.find(conn->id());
@@ -50,7 +50,7 @@ TCPServerPlus::TCPServerPlus(evnetplus::EventLoop* loop, const std::string& list
 
                 session->onDisconnected();
 
-                _session_map.erase(sessionpair);
+                _session_map.erase(sessionpair->first);
             }
         }
     });

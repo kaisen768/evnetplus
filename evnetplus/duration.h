@@ -1,7 +1,7 @@
 // Modeled after the time.Duration of Golang project.
 #pragma once
 
-#include <string>
+#include "inner_pre.h"
 
 namespace evnetplus {
 

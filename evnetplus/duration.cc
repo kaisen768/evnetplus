@@ -1,3 +1,5 @@
+#include "inner_pre.h"
+
 #include "duration.h"
 
 namespace evnetplus {
